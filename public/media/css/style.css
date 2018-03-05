@@ -1,0 +1,181 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    overflow: hidden;
+    height: 240px;
+    background: url('../img/fone.svg');
+}
+
+#logo {
+    padding: 10px 0 0 20px;
+    float: left;
+}
+
+.logotext {
+    margin: 30px 0 0 20%;
+    color: Orange;
+    font-size: 400%;
+}
+
+.logotext span {
+    color: Green;
+}
+
+.popup {
+    float: right;
+    padding: 0 50px 0 0;
+}
+
+.popup {
+    text-decoration: none;
+    color: black;
+}
+
+.popup hover {
+    color: red;
+}
+
+.menutop {
+    display: flex;
+    border: black;
+}
+
+.menutop a {
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #fefcea, gold);
+    color: green;
+    border-left: solid 1px black;
+
+}
+
+.menutop a:hover {
+    background: gold;
+    color: black;
+}
+
+.modal-window{
+	position:absolute;
+	top:150px;
+	left:50%;
+	width:400px;
+	margin-left:-200px;
+	padding:10px;
+	border:solid 1px black;
+	box-shadow: 1px 1px 1px black;
+	background:white;
+	border-radius:6px;
+}
+
+.modal-close-btn{
+	position:absolute;
+	top: 2px;
+	right:2px;
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	color:red;
+	font-size:18px;
+}
+	
+/*.modal-window:before{
+	position:relative;
+	top:-1px;
+	content:"Close";
+	font-size:13px;
+}
+*/
+
+#overlay{
+	position:fixed;
+	background:black;
+	opacity:0.7;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+}
+
+.col-md-4 {
+    padding: 10px 0;
+}
+
+.game_img {
+    text-align: center;
+}
+
+.game_name {
+    text-align: center;
+}
+
+.RowContacts {
+   overflow:hidden;
+}
+
+.RowContacts img{
+   padding:5px 5px 0 0;
+}
+
+.RowContacts p{
+   display:inline;
+}
+
+/*кабинет вывод*/
+
+
+.lastproduct{
+	margin-top:20px;
+}
+
+.lastproduct td{
+	margin-top:20px;
+}
+
+.lastproduct td p{
+	margin-left:20px;
+}
+
+.lastproduct span{
+	margin-left:20px;
+
+}
+
+.lastproduct img{
+	width:250px;
+	height:250px;
+}
+
+/*кабинет вывод*/
+
+.timework{
+	padding:10px 0;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.timework p{
+   display:inline;
+}
+
+.footer {
+	margin-top:30px;
+    padding: 50px 0;
+    text-align: center;
+    background: grey;
+}
+
+.footer a {
+    color: black;
+}
+
+
+.error{
+color:red;
+background:white;
+padding:5px;
+}
