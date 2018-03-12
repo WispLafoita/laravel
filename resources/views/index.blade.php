@@ -6,5 +6,6 @@
 @stop
 
 @section('content')
-    <h2>Most Populars</h2>
+    <h2>{{$text->name}}</h2>
+    {!! $text->body !!}
 @endsection

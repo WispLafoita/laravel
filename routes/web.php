@@ -17,4 +17,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('{id}', 'BaseController@getStatic');
+Route::get('/articles', 'BaseController@getStatics');
+
+Route::get('{id}', 'BaseController@getStatic');//всегда последним

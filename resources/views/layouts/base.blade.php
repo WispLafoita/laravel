@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="description" content="{{config("app.description")}}" />
+    <meta name="description" content="{{config("app.description")}}"/>
     <title>THEMELOCK.COM - FREE THEMES & TEMPLATES</title>
     <!-- // Stylesheets // -->
     @section('styles')
@@ -45,7 +45,7 @@
                                             <li><a href="blogpost.html">Blog Post</a></li>
                                             <li><a href="news.html">News</a></li>
                                             <li><a href="contact.html">Contact Us</a></li>
-                                            <li><a href="static.html">About Us</a></li>
+                                            <li><a href="{{asset('about')}}">About Us</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Themes</a>
