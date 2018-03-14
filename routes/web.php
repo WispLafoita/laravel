@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/','BaseController@getIndex');
-
 Auth::routes();
+
+Route::get('/','BaseController@getIndex');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/articles', 'BaseController@getStatics');
 
-Route::get('{id}', 'BaseController@getStatic');//всегда последним
+Route::get('/{id}', 'BaseController@getStatic');//всегда последним
