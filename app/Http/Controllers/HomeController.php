@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\VideoRequest;
+use App\Video;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,13 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function postIndex(VideoRequest $r)  //запускается с зависимостью обьекта $r
+    {
+        $r['video'] = '';   //ссылка на видео пока не реализована
+        Video::create($r->all());   //create - множественная вставка
+        return redirect('home');
+
     }
 }
