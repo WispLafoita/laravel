@@ -1,5 +1,8 @@
 @extends('layouts.app')
-
+@section('scripts')
+    @parent
+    <script src="{{asset('public/js/delete.js')}}"></script>
+@endsection
 @section('content')
     <div class="container">
         <div class="row">
@@ -14,7 +17,7 @@
                             </div>
                         @endif
 
-                        <form method="post" action="{{asset('home')}}">
+                        <form enctype="multipart/form-data" method="post" action="{{asset('home')}}">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 @if ($errors->has('name'))
@@ -33,11 +36,9 @@
                                     </span>
                                 @endif
                                 <select name="categories" class="form-control" id="categories">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    @foreach($cats as $one)
+                                        <option value="{{$one->id}}">{{$one->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
@@ -63,6 +64,7 @@
                         {!! csrf_field() !!}    <!--защита формы в ларавел-->
                         </form>
                     </div>
+                    @include('templates.videos');
                 </div>
             </div>
         </div>

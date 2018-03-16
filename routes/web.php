@@ -21,4 +21,6 @@ Route::get('/articles', 'BaseController@getStatics');
 
 Route::post('home', 'HomeController@postIndex');
 
+Route::get('home/delete/{id}','HomeController@getDelete');
+
 Route::get('/{id}', 'BaseController@getStatic');//всегда последним
