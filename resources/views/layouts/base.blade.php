@@ -7,17 +7,17 @@
     <title>THEMELOCK.COM - FREE THEMES & TEMPLATES</title>
     <!-- // Stylesheets // -->
     @section('styles')
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css"/>
+        <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="{{asset('css/ddsmoothmenu.css')}}"/>
     @show
 <!-- // Javascript // -->
     @section('scripts')
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
-        <script type="text/javascript" src="js/menu.js"></script>
-        <script type="text/javascript" src="js/contentslider.js"></script>
-        <script type="text/javascript" src="js/cufon-yui.js"></script>
-        <script type="text/javascript" src="js/Tahoma_400-Tahoma_700.font.js"></script>
+        <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/ddsmoothmenu.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/menu.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/contentslider.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/cufon-yui.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/Tahoma_400-Tahoma_700.font.js')}}"></script>
         <script type="text/javascript">Cufon.replace('h1,h2,h3,h4,h5, h6, .txtcufon');</script>
     @show
 </head>
