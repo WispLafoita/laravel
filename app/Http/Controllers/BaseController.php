@@ -7,10 +7,11 @@ use App\Maintext;    //подключаемся к моделе
 
 class BaseController extends Controller
 {
-    public function getIndex()
+    public function getIndex(Request $request)
     {
+        $acc = $request->acc;
         $text = Maintext::where('url', 'index')->first();
-        return view('index', compact('text'));//передаёт переменную $text с именем text
+        return view('index', compact('text','acc'));//передаёт переменную $text с именем text
     }
 
     public function getStatic($id = null)

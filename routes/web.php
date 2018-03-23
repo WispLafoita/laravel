@@ -13,7 +13,13 @@
 
 Auth::routes();
 
-Route::get('/','BaseController@getIndex');
+Route::group(['middleware' => ['account']],function (){
+
+    Route::get('/','BaseController@getIndex');
+    Route::get('news', 'NewsController@getNews');
+    Route::get('news/{id}', 'NewsController@getOne');
+
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -27,8 +33,12 @@ Route::get('home/edit/{id}','HomeController@getEdit')->where('id','[0-9]+');
 
 Route::post('home/edit/{id}','HomeController@postEdit')->where('id','[0-9]+');
 
-Route::get('news', 'NewsController@getNews');
+//обращение к middleware 'admin' для целой группы роутов
+Route::group(['middleware' => ['admin']],function (){
 
-Route::get('news/{id}', 'NewsController@getOne');
+    Route::get('manager', 'ManagerController@getIndex');
+
+});
+
 
 Route::get('/{id}', 'BaseController@getStatic');//всегда последним

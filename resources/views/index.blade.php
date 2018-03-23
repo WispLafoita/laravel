@@ -7,6 +7,8 @@
 
 @section('content')
     <div id="content_sec">
+        <!--картинка с аккаунта, которую выводит контроллер, получая её от мидлвара-->
+        <img src="{{asset(isset($acc->picture)?('uploads/thumb/'.$acc->picture):('uploads/thumb/no_pic.jpg'))}}" alt=""/>
         <!--Main Section-->
         <div class="col1">
             <!--Vedio slider -->
