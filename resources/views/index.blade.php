@@ -376,32 +376,22 @@
                 </ul>
                 <div class="clear"></div>
             </div>
+            <!--Сайт бары реализованные при помощи сервис провайдеров-->
             <div class="sideblock3">
                 <h2>Tags</h2>
                 <div class="tag">
-                    <a href="#">Anne Roumanoff</a>
-                    <a href="#"> Caméra caché Cauet </a>
-                    <a href="#"> Eric et Ramzy</a>
-                    <a href="#"> Florence</a>
-                    <a href="#">Foresti</a>
-                    <a href="#">Franck Dubosc</a>
-                    <a href="#">Francois</a>
-                    <a href="#">Damiens </a>
-                    <a href="#">Anthony</a>
-                    <a href="#">Kavanagh</a>
-                    <a href="#">Jamel </a>
-                    <a href="#">Debbouze </a>
-                    <a href="#">Laurent</a>
-                    <a href="#"> Ruquier</a>
-                    <a href="#">Les Nuls</a>
-                    <a href="#">Michaël Youn</a>
-                    <a href="#"> Omar et Fred</a>
-                    <a href="#">Patrick Timsit</a>
-                    <a href="#">Rémi Gaillard</a>
-                    <a href="#">Gad ElMaleh </a>
-                    <a href="#">Stéphane Guillon</a>
-                    <a href="#">TF1 Replay </a>
-                    <a href="#">chatroulette</a>
+                    @foreach($catalogs_comp as $one)
+                    <a href="#">{{$one->name}}</a>
+                    @endforeach
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="sideblock3">
+                <h2>News</h2>
+                <div class="tag">
+                    @foreach($news_comp as $one)
+                        <a href="#">{{$one->name}}</a>
+                    @endforeach
                 </div>
                 <div class="clear"></div>
             </div>

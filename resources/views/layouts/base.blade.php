@@ -63,6 +63,7 @@
                 </div>
                 <!--Top search-->
                 <div class="top_search">
+
                     <input value="Enter you keywords to search"
                            onfocus="if(this.value=='Enter you keywords to search') {this.value='';}"
                            onblur="if(this.value=='') {this.value='Enter you keywords to search';}" name="txt"
